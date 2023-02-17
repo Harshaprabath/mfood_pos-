@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../components/buttons.dart';
+import 'wellcome_page.dart';
+
 // ignore: must_be_immutable
 class LanguagePage extends StatefulWidget {
   LanguagePage({super.key});
@@ -45,7 +48,7 @@ class _LanguagePageState extends State<LanguagePage> {
                   _selectedOption = value!;
                 });
               },
-              title: const Text('text'),
+              title: const Text('Engish'),
             ),
             RadioListTile(
               value: 2,
@@ -67,22 +70,109 @@ class _LanguagePageState extends State<LanguagePage> {
               },
               title: const Text('text'),
             ),
+            RadioListTile(
+              value: 4,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
+            RadioListTile(
+              value: 5,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
+            RadioListTile(
+              value: 6,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
+            RadioListTile(
+              value: 7,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
+            RadioListTile(
+              value: 8,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
+            RadioListTile(
+              value: 9,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
+            RadioListTile(
+              value: 10,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
+            RadioListTile(
+              value: 11,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
+            RadioListTile(
+              value: 12,
+              groupValue: _selectedOption,
+              onChanged: (val) {
+                setState(() {
+                  _selectedOption = val!;
+                });
+              },
+              title: const Text('text'),
+            ),
           ]),
         ),
-        bottomNavigationBar: TextButton(
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
-              backgroundColor: const Color.fromARGB(255, 247, 161, 3),
-              padding: const EdgeInsets.all(15.0),
-            ),
-            onPressed: () {},
-            child: const Text(
-              'Submit',
-              style: TextStyle(
-                fontSize: 18.0,
-              ),
-            )),
+        bottomNavigationBar: submitBtn(
+            text: "Submit",
+            onPress: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const WelcomePage()),
+              );
+            }),
       ),
     );
   }
 }
+
+
