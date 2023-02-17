@@ -70,7 +70,12 @@ class _HomePageState extends State<HomePage> {
                           color: (selectedIndex == index)? Colors.blueGrey.withOpacity(0.2):Colors.transparent,
                            child: Padding(
                              padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 5),
-                             child: Text('Tab $index'), //Text(menu[index])
+                             child: Column(
+                               children: [
+                                 Text('Tab $index'),
+                                 Text('Tab $index'),
+                               ],
+                             ), //Text(menu[index])
                            ),
                          )) 
                       ]),
